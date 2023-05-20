@@ -1,6 +1,6 @@
 import './App.css';
+import ListProdutos from './componentes/ListProdutos';
 import produtos from './data/produtos.json';
-import CardProduto from './componentes/CardProduto';
 
 function App() {
   return (
@@ -8,9 +8,7 @@ function App() {
     <div className="w3-container w3-teal">
       <h1>Hello World</h1>
     </div>
-    <CardProduto 
-      produto = {produtos[0]}>
-    </CardProduto>
+    <ListProdutos produtos={produtos}></ListProdutos>
     </>
 );
 }
