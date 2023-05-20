@@ -13,7 +13,7 @@ function App() {
           <h1>Exercicio da Aula</h1>
         </div>
         <Carroussel></Carroussel>
-        <ListProdutos produtos={produtos}></ListProdutos>
+        <ListProdutos></ListProdutos>
       </main>
     </>
 );
