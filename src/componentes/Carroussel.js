@@ -1,15 +1,15 @@
 import React from "react";
-
+import { useState } from "react";
 
 export default function Carroussel(props) {
-    let slideIndex = 1;
+    const [slideIndex, setSlideIndex] = useState(1);
     const length = 2;
 
     function plusDivs(n) {
         let index = slideIndex + n;
         if(index > length) { index = 1; }
         if(index < 1) { index = length; }
-        slideIndex = index;
+        setSlideIndex(index);
         console.log(slideIndex);
     }
 
@@ -21,8 +21,8 @@ export default function Carroussel(props) {
             <div className="w3-center w3-container w3-section w3-large w3-text-hite w3-display-bottommiddle" style={{width:"100%"}}>
                 <div className="w3-left w3-hover-text-khaki" onClick={() => plusDivs(-1)}>&#10094;</div>
                 <div className="w3-right w3-hover-text-khaki" onClick={() => plusDivs(1)}>&#10095;</div>
-                <span className="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
-                <span className="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
+                <span className="w3-badge demo w3-border w3-transparent w3-hover-white" onClick={() => setSlideIndex(1)}></span>
+                <span className="w3-badge demo w3-border w3-transparent w3-hover-white" onClick={() => setSlideIndex(2)}></span>
             </div>
         </section>
     )
